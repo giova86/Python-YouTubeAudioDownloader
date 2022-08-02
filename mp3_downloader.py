@@ -1,16 +1,8 @@
 from pytube import YouTube
 import os
+from art import *
 
-
-print('''
-     __       ___       __   ___
-\ / /  \ |  |  |  |  | |__) |__
- |  \__/ \__/  |  \__/ |__) |___
-
- __   __                  __        __   ___  __
-|  \ /  \ |  | |\ | |    /  \  /\  |  \ |__  |__)
-|__/ \__/ |/\| | \| |___ \__/ /~~\ |__/ |___ |  \.
- ''')
+tprint("\nYouTube\nDownloader", font="Larry 3D")
 
 # url input from user
 yt = YouTube(str(input("\nEnter the URL of the YouTube video: \n>> ")))
