@@ -1,6 +1,17 @@
 from pytube import YouTube
 import os
 
+
+print('''
+     __       ___       __   ___
+\ / /  \ |  |  |  |  | |__) |__
+ |  \__/ \__/  |  \__/ |__) |___
+
+ __   __                  __        __   ___  __
+|  \ /  \ |  | |\ | |    /  \  /\  |  \ |__  |__)
+|__/ \__/ |/\| | \| |___ \__/ /~~\ |__/ |___ |  \.
+ ''')
+
 # url input from user
 yt = YouTube(str(input("\nEnter the URL of the YouTube video: \n>> ")))
 
