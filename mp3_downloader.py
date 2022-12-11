@@ -1,6 +1,7 @@
 from pytube import YouTube
 import os
 from art import *
+import subprocess
 
 tprint("\nYouTube\nDownloader", font="Larry 3D")
 
@@ -40,8 +41,21 @@ out_file = audio.download(output_path=destination)
 
 # save the file
 base, ext = os.path.splitext(out_file)
-new_file = base + '.mp3'
-os.rename(out_file, new_file)
+#new_file = base + '.mp3'
+#os.rename(out_file, new_file)
+print(base.split('/')[-1])
+
+subprocess.run([
+    'ffmpeg',
+    '-i', base.split('/')[-1]+'.mp4',
+    base.split('/')[-1]+'.mp3'
+])
+
+subprocess.run([
+    'rm',
+    base.split('/')[-1]+'.mp4'
+])
+
 
 # result of success
 print(f"\n{yt.title} has been successfully downloaded.")
